@@ -4,6 +4,26 @@
   <meta charset="UTF-8">
   <title>프로젝트 - Luka</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const projects = document.querySelectorAll('.project-container');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    projects.forEach(project => {
+      observer.observe(project);
+    });
+  });
+</script>
+
 </head>
 <body>
   <header>
@@ -63,3 +83,4 @@
   </footer>
 </body>
 </html>
+
