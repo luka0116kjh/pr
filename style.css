@@ -164,9 +164,8 @@ p {
   gap: 40px;
   margin: 40px 0;
 
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -275,3 +274,4 @@ footer {
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
+
