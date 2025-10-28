@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luka – Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        html {
+            scroll-behavior: smooth
+        }
+
+        section {
+            scroll-margin-top: 80px
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="#top" class="logo">Luka</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="top" class="hero">
+        <div class="aurora" aria-hidden="true"></div>
+        <div class="hero-content fade-in">
+            <p class="tagline">Building, breaking, learning — every day</p>
+            <h1>Luka</h1>
+            <p class="title">Student · Programmer · AI Engineer</p>
+            <p class="desc">I learn fast, ship faster, and share what I learn.</p>
+            <div class="buttons">
+                <a href="mailto:24s10510@ghas.hs.kr" class="btn primary">Contact</a>
+                <a href="https://github.com/luka0116kjh" class="btn" target="_blank" rel="noreferrer">GitHub</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2 class="fade-in">About</h2>
+        <div class="about-grid">
+            <div class="about-text fade-in">
+                <p>안녕하세요, 만들고, 부수고, 배우는 <strong>김진형</strong>입니다.</p>
+                <div class="skills-icons">
+                    <h2 style="text-align: center;">skill</h2>
+                    <div class="skill" title="Python">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path
+                                d="M36 8h-8a10 10 0 0 0-10 10v6h14a4 4 0 1 1 0 8H10a10 10 0 0 1-10-10V18A18 18 0 0 1 18 0h18a6 6 0 0 1 0 12Z"
+                                fill="currentColor" opacity=".85" />
+                            <circle cx="26" cy="8" r="3" fill="var(--background)" />
+                        </svg>
+                        <span>Python</span>
+                    </div>
+
+                    <div class="skill" title="Java">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M22 46h20c6 0 10 2 10 6s-8 6-20 6-20-2-20-6 4-6 10-6Z" fill="currentColor"
+                                opacity=".2" />
+                            <path d="M32 6c6 6-6 10 0 16M24 26c6 4 16 2 16 8 0 4-8 6-16 6" stroke="currentColor"
+                                stroke-width="3" fill="none" stroke-linecap="round" />
+                        </svg>
+                        <span>Java</span>
+                    </div>
+
+                    <div class="skill" title="JSP">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <rect x="10" y="8" width="36" height="48" rx="4" ry="4" fill="currentColor" opacity=".12" />
+                            <path d="M20 24l8 8-8 8M44 24l-8 8 8 8" stroke="currentColor" stroke-width="3" fill="none"
+                                stroke-linecap="round" />
+                        </svg>
+                        <span>JSP</span>
+                    </div>
+
+                    <div class="skill" title="HTML">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M8 8h48l-6 44-18 6-18-6-6-44Z" fill="currentColor" opacity=".15" />
+                            <path d="M20 20h24M18 32h20M22 44h16" stroke="currentColor" stroke-width="4" />
+                        </svg>
+                        <span>HTML</span>
+                    </div>
+
+                    <div class="skill" title="CSS">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <path d="M8 8h48l-6 44-18 6-18-6-6-44Z" fill="currentColor" opacity=".15" />
+                            <path d="M18 24h28M20 34h20M22 44h14" stroke="currentColor" stroke-width="4" />
+                        </svg>
+                        <span>CSS</span>
+                    </div>
+
+                    <div class="skill" title="JavaScript">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <rect x="8" y="8" width="48" height="48" rx="6" fill="currentColor" opacity=".15" />
+                            <text x="18" y="44" font-family="monospace" font-size="24" fill="currentColor">JS</text>
+                        </svg>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="skill" title="MySQL">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <ellipse cx="32" cy="14" rx="20" ry="8" fill="currentColor" opacity=".15" />
+                            <path d="M12 14v24c0 4 9 8 20 8s20-4 20-8V14" stroke="currentColor" stroke-width="3"
+                                fill="none" />
+                            <text x="18" y="40" font-family="monospace" font-size="12" fill="currentColor">SQL</text>
+                        </svg>
+                        <span>MySQL</span>
+                    </div>
+
+                    <div class="skill" title="ASM">
+                        <svg viewBox="0 0 64 64" aria-hidden="true">
+                            <rect x="10" y="14" width="44" height="36" rx="6" fill="currentColor" opacity=".12" />
+                            <rect x="18" y="22" width="28" height="20" rx="2" stroke="currentColor" stroke-width="3"
+                                fill="none" />
+                            <path d="M18 46h8M38 46h8" stroke="currentColor" stroke-width="3" />
+                            <circle cx="24" cy="32" r="2" fill="currentColor" />
+                            <circle cx="32" cy="32" r="2" fill="currentColor" />
+                            <circle cx="40" cy="32" r="2" fill="currentColor" />
+                        </svg>
+                        <span>ASM</span>
+                    </div>
+                </div>
+                <div class="about-side fade-in">
+                    <h3>Highlights</h3>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+        <h2 class="fade-in">Projects</h2>
+        <div class="project-grid">
+
+            <!-- 테트리스 -->
+            <article class="project-card fade-in">
+                <h3>Make a Tetris Game</h3>
+                <p>
+                    JavaScript로 테트리스를 직접 구현하며, 게임 로직과 이벤트 루프의 원리를 체득했습니다.
+                    단순한 블록 쌓기가 아니라, 사고를 구조화하는 경험이었습니다.
+                </p>
+                <div class="tags"><span>JavaScript</span><span>Game</span><span>Logic</span><span><a href="https://luka0116kjh.github.io/tt/" style="color: #ffffff;">테트리스</a></span></div>
+            </article>
+
+            <!-- 인터넷 개념 웹 -->
+            <article class="project-card fade-in">
+                <h3>Concept Web Creation</h3>
+                <p>
+                    HTML과 CSS로 인터넷의 구조와 개념을 시각화한 웹페이지를 제작했습니다.
+                    복잡한 내용을 처음 보는 사람도 직관적으로 이해할 수 있도록 설계했습니다.
+                </p>
+                <div class="tags"><span>HTML</span><span>CSS</span><span>Design</span><span><a href="https://luka0116kjh.github.io/VC/" style="color: #ffffff;">web</a></span></div>
+            </article>
+
+            <!-- 해킹 대회 -->
+            <article class="project-card fade-in">
+                <h3>해킹 대회 팀 출전 (11/8~9)</h3>
+                <p>
+                    현대오토에버 화이트해커 양성 교육을 거쳐 팀 단위로 대회(11/8~9)에 출전했습니다.
+                </p>
+                <div class="tags"><span>Security</span><span>CTF</span><span>Teamwork</span></div>
+            </article>
+
+        </div>
+
+        <div class="fade-in">
+            <h3>VisualCamp – 도제활동</h3>
+            <p>
+                나는 비주얼캠프(VisualCamp)에서 도제 프로그램을 통해 실제 산업 현장을 경험하고 있다.
+                이곳은 <strong>시선 추적(Eye Tracking) 기술</strong>을 개발하는 기업으로,
+                나는 그 안에서 협업, 데이터 처리, 그리고 AI 기반 UX 분석 프로세스를 배우고 있다.
+            </p>
+
+            <ul>
+                <li><strong>참여 분야:</strong> 애플리케이션 보안 및 프론트엔드 개발 실습</li>
+                <li><strong>주요 업무:</strong> Eye Tracking SDK 연동 테스트, UI 반응 개선</li>
+                <li><strong>학습 내용:</strong> 알고리즘 최적화, 자료구조 이해, 협업 워크플로우</li>
+                <li><strong>성과:</strong> 내부 테스트 자동화 및 보고서 작성 지원</li>
+            </ul>
+        </div>
+        <img src="img/vc.png" alt="#">
+        <img src="img/fafa.png" alt="#" style="width: 450px;">
+    </section>
+    <footer class="fade-in">© <span id="year"></span> Luka.</footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
