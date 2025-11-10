@@ -24,6 +24,7 @@
             <a href="#top" class="logo">Luka</a>
             <div class="nav-links">
                 <a href="#about">About</a>
+                <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#fade-in">VisualCamp</a>
                 <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
@@ -52,7 +53,8 @@
         <div class="about-grid">
             <div class="about-text fade-in">
                 <p>안녕하세요, 만들고, 부수고, 배우는 <strong>김진형</strong>입니다.</p>
-<h2 class="fade-in">Programming Languages</h2>
+                <h2 class="fade-in">Programming Languages</h2>
+                <!--프로그래밍 로고 건들지 말것 -->
                 <div class="skills-icons">
                     <div class="skill" title="Python">
                         <svg viewBox="0 0 64 64" aria-hidden="true">
@@ -175,6 +177,82 @@
         </div>
     </section>
 
+    <!-- SKILLS SECTION (새로 추가) -->
+    <section id="skills" class="section">
+        <h2 class="fade-in">Tech Stack</h2>
+        <p class="fade-in" style="text-align: center; color: #888; margin-bottom: 3rem;">
+            다양한 기술을 활용하여 문제를 해결하고, 지속적으로 학습하며 성장하고 있습니다.
+        </p>
+        
+        <div class="skills-card-grid">
+            <!-- Card 1: Programming Languages -->
+            <article class="skill-card fade-in">
+                <div class="skill-card-image">
+                    <img src="img/python.jpg" alt="Programming Languages">
+                </div>
+                <div class="skill-card-content">
+                    <h3>Programming Languages</h3>
+                    <p>Python, Java, JavaScript를 중심으로 다양한 프로그래밍 언어를 활용 응용하여 이해도를 높입니다</p>
+                </div>
+            </article>
+
+            <!-- Card 2: Web Development -->
+            <article class="skill-card fade-in">
+                <div class="skill-card-image">
+                    <img src="img/se.png" alt="Web Development">
+                </div>
+                <div class="skill-card-content">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript로 반응형 웹사이트를 제작합니다. 지금은 간단하게라도 제작하여도 곧 퀼리티를 높일것입니다.</p>
+                </div>
+            </article>
+
+            <!-- Card 3: AI & Machine Learning -->
+            <article class="skill-card fade-in">
+                <div class="skill-card-image">
+                    <img src="img/ai.png" alt="AI & Machine Learning">
+                </div>
+                <div class="skill-card-content">
+                    <h3>AI & Machine Learning</h3>
+                    <p>AI의 머신러닝 딥러닝등으로 AI관련으로 여러 공부를 하면 활용성을 높입니다.</p>
+                </div>
+            </article>
+
+            <!-- Card 4: Security & Hacking -->
+            <article class="skill-card fade-in">
+                <div class="skill-card-image">
+                    <img src="img/bl.png" alt="Security & Hacking">
+                </div>
+                <div class="skill-card-content">
+                    <h3>Security & Hacking</h3>
+                    <p>현대오토에버 화이트해커 교육 영향으로 어셈블리어 혹은 웹해킹을 공부하며 성장을 하고있습니다.</p>
+                </div>
+            </article>
+
+            <!-- Card 5: Algorithms & Data Structures -->
+            <article class="skill-card fade-in">
+                <div class="skill-card-image">
+                    <img src="img/algorithms.png" alt="Algorithms">
+                </div>
+                <div class="skill-card-content">
+                    <h3>Algorithms & Data Structures</h3>
+                    <p>효율적인 알고리즘 설계와 자료구조 활용에 집중하고 있습니다. 문제 해결 능력을 키우기 위해 꾸준히 코딩 연습을 하며, 최적화된 솔루션을 찾습니다.</p>
+                </div>
+            </article>
+
+            <!-- Card 6: Robotics & IoT -->
+            <article class="skill-card fade-in">
+                <div class="skill-card-image">
+                    <img src="img/ev3" alt="Robotics">
+                </div>
+                <div class="skill-card-content">
+                    <h3>Robotics & IoT</h3>
+                    <p>EV3 로봇 프로그래밍 경진대회에 참가하여 자율주행 로봇을 제작했습니다. 센서 기반 동작 제어와 실시간 의사결정 알고리즘을 구현한 경험이 있습니다.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <!-- PROJECTS -->
     <section id="projects" class="section">
         <h2 class="fade-in">Projects</h2>
@@ -203,29 +281,80 @@
                 <img src="img/ro.jpg" alt="로봇 프로그래밍 경진대회" style="width:100%; margin-top:10px; border-radius:10px;">
             </article>
 
-
             <article class="project-card fade-in">
                 <h3>해킹 대회 팀 출전 (11/8~9)</h3>
                 <p>현대오토에버 화이트해커 양성 교육을 거쳐 팀 단위로 대회(11/8~9)에 출전했습니다.</p>
                 <div class="tags"><span>Security</span><span>CTF</span><span>Teamwork</span></div>
-                <img src="img/wi.png" alt="Hacking competition"
+                <img src="img/wh.jpg" alt="Hacking competition"
                     style="width:100%; margin-top:10px; border-radius:10px;">
             </article>
 
         </div>
+    </section>
 
-        <div class="fade-in" id="fade-in">
-            <h3>VisualCamp – 도제활동</h3>
-            <p>비주얼캠프(VisualCamp)에서 시선추적,기본적 프로그래밍 향상,응용을 하고있습니다 .</p>
-            <ul>
-                <li><strong>참여 분야:</strong> 애플리케이션 보안 및 프론트엔드 개발 실습</li>
-                <li><strong>주요 업무:</strong> 알고리즘 최적화, 자료구조 이해 학습</li>
-                <li><strong>성과:</strong> 문제 풀이 후 코드 동작 원리를 설명하며 이해도 향상,커뮤니케이션 향상</li>
-            </ul>
+    <!-- VISUALCAMP -->
+    <section id="fade-in" class="section">
+        <h2 class="fade-in">VisualCamp Experience</h2>
+        <p class="fade-in" style="text-align: center; color: #888; margin-bottom: 3rem;">
+            도제 프로그램 VisualCamp
+        </p>
+
+        <div class="visualcamp-container">
+            <!-- 텍스트 영역 -->
+            <div class="vc-content fade-in">
+                <div class="vc-card">
+                    <div class="vc-header">
+                        <h3>VisualCamp – 도제활동</h3>
+                        <span class="vc-badge">진행중</span>
+                    </div>
+                    <p class="vc-description">
+                        비주얼캠프(VisualCamp)에서 시선추적,기본적 프로그래밍 향상,응용을 하고있습니다 .
+                    </p>
+                    
+                    <div class="vc-details">
+                        <div class="vc-detail-item">
+                            <div class="vc-icon"></div>
+                            <div>
+                                <strong>참여 분야</strong>
+                                <p>애플리케이션 보안 및 프론트엔드 개발 실습</p>
+                            </div>
+                        </div>
+                        
+                        <div class="vc-detail-item">
+                            <div class="vc-icon"></div>
+                            <div>
+                                <strong>주요 업무</strong>
+                                <p>알고리즘 최적화, 자료구조 이해 학습</p>
+                            </div>
+                        </div>
+                        
+                        <div class="vc-detail-item">
+                            <div class="vc-icon"></div>
+                            <div>
+                                <strong>성과</strong>
+                                <p>문제 풀이 후 코드 동작 원리를 설명하며 이해도 향상, 커뮤니케이션 향상</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 이미지 영역 -->
+            <div class="vc-images fade-in">
+                <div class="vc-image-main">
+                    <img src="img/vc.png" alt="VisualCamp 활동">
+                    <div class="vc-image-overlay">
+                        <span>회사 로고</span>
+                    </div>
+                </div>
+                <div class="vc-image-sub">
+                    <img src="img/fafa.png" alt="VisualCamp 프로젝트">
+                    <div class="vc-image-overlay">
+                        <span>사진</span>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <img src="img/vc.png" alt="#">
-        <img src="img/fafa.png" alt="#" style="width:450px;">
     </section>
 
     <!-- FOOTER -->
@@ -237,9 +366,4 @@
     <script src="script.js"></script>
 </body>
 
-
-
 </html>
-
-
-

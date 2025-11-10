@@ -99,10 +99,29 @@ body.dark nav {
   gap: 8px;
   transition: transform .18s ease, box-shadow .18s ease, color .18s ease, border-color .18s ease;
 }
-body.dark .skill { border-color: rgba(255,255,255,.08); }
 
-.skill svg { width: 36px; height: 36px; display: block; }
-.skill span { font-size: .9rem; opacity: .95; }
+body.dark .skill { 
+  border-color: rgba(255,255,255,.08); 
+}
+
+/* 이미지를 위한 새로운 스타일 추가 */
+.skill-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
+}
+
+.skill svg { 
+  width: 36px; 
+  height: 36px; 
+  display: block; 
+}
+
+.skill span { 
+  font-size: .9rem; 
+  opacity: .95; 
+}
 
 .skill:hover {
   transform: translateY(-6px);
@@ -111,11 +130,17 @@ body.dark .skill { border-color: rgba(255,255,255,.08); }
   border-color: currentColor;
 }
 
-
 @media (max-width: 900px) {
-  .skill:hover { transform: translateY(-3px); }
+  .skill:hover { 
+    transform: translateY(-3px); 
+  }
+  
+  /* 모바일에서 이미지 크기 조정 */
+  .skill-img {
+    width: 40px;
+    height: 40px;
+  }
 }
-
 
 .aurora {
   position: absolute;
@@ -221,6 +246,7 @@ footer {
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 .school-card {
   background: var(--card);
   border-radius: 12px;
@@ -239,6 +265,7 @@ footer {
   margin-top: 10px;
   border-radius: 10px;
 }
+
 .school-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -246,20 +273,285 @@ footer {
   margin-top: 20px;
 }
 
-.school-card {
+/* Skills Card Grid */
+.skills-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skill-card {
   background: var(--card);
-  border-radius: 12px;
-  padding: 20px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(0,0,0,.06);
+  cursor: pointer;
 }
 
-.school-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+body.dark .skill-card {
+  border-color: rgba(255,255,255,.08);
 }
 
-.school-card img {
+.skill-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.25);
+  border-color: var(--primary);
+}
+
+.skill-card-image {
   width: 100%;
-  margin-top: 10px;
-  border-radius: 10px;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.skill-card:hover .skill-card-image img {
+  transform: scale(1.1);
+}
+
+.skill-card-content {
+  padding: 25px;
+}
+
+.skill-card-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: var(--primary);
+  transition: color 0.3s ease;
+}
+
+.skill-card:hover .skill-card-content h3 {
+  color: var(--foreground);
+}
+
+.skill-card-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #666;
+}
+
+body.dark .skill-card-content p {
+  color: #aaa;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .skills-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  
+  .skill-card-image {
+    height: 180px;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-8px) scale(1.01);
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* VisualCamp Section */
+.visualcamp-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.vc-content {
+  position: relative;
+}
+
+.vc-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 35px;
+  border: 1px solid rgba(0,0,0,.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark .vc-card {
+  border-color: rgba(255,255,255,.08);
+}
+
+.vc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(16, 185, 129, 0.15);
+}
+
+.vc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.vc-header h3 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.vc-badge {
+  background: linear-gradient(135deg, var(--primary), #3b82f6);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.vc-description {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+body.dark .vc-description {
+  color: #aaa;
+}
+
+.vc-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vc-detail-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(16, 185, 129, 0.05);
+  border-radius: 12px;
+  border-left: 3px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.vc-detail-item:hover {
+  background: rgba(16, 185, 129, 0.1);
+  transform: translateX(5px);
+}
+
+.vc-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.vc-detail-item strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1.05rem;
+  margin-bottom: 5px;
+}
+
+.vc-detail-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+body.dark .vc-detail-item p {
+  color: #aaa;
+}
+
+.vc-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vc-image-main,
+.vc-image-sub {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.vc-image-main:hover,
+.vc-image-sub:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(16, 185, 129, 0.2);
+}
+
+.vc-image-main img,
+.vc-image-sub img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.vc-image-main:hover img,
+.vc-image-sub:hover img {
+  transform: scale(1.05);
+}
+
+.vc-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.vc-image-main:hover .vc-image-overlay,
+.vc-image-sub:hover .vc-image-overlay {
+  transform: translateY(0);
+}
+
+.vc-image-overlay span {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* 반응형 */
+@media (max-width: 900px) {
+  .visualcamp-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .vc-card {
+    padding: 25px;
+  }
+  
+  .vc-header h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .vc-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .vc-detail-item {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
