@@ -5,7 +5,7 @@ Student · Programmer · AI Engineer · infosec
 > Building, breaking, learning — every day.  
 
 ## 소개  
-안녕하세요, 김진형입니다.   
+안녕하세요, Luka입니다.   
 프로그래밍과 인공지능,정보보안 분야에 관심이 많으며, 빠르게 배우고 더 빠르게 결과물을 만들어 공유하는 것을 지향합니다.  
 
 ## 기술 스택  
