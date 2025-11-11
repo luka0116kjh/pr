@@ -1,6 +1,6 @@
 # pr
-# Luka (김진형)  
-Student · Programmer · AI Engineer  
+# Luka 
+Student · Programmer · AI Engineer · infosec
 
 > Building, breaking, learning — every day.  
 
@@ -53,5 +53,5 @@ EV3를 활용해 자율 주행 및 센서 기반 동작을 구현한 프로젝�
 - 성과: 문제 해결 후 코드 동작 원리를 설명하는 과정을 통해 이해도 및 커뮤니케이션 능력 향상  
 
 ---
-
+github : https://luka0116kjh.github.io/pr/
 소중한 시간을 내어 제 포트폴리오를 살펴봐 주셔서 감사합니다.  
