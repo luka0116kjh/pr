@@ -79,39 +79,66 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// 학교 활동 버튼 클릭 효과 (선택사항)
+// 학교 활동 버튼 토글 기능 ⭐ 수정된 부분
 const schoolButtons = document.querySelectorAll('.school-btn');
 const schoolCards = document.querySelectorAll('.school-card');
 
+// 각 카드의 확대 상태를 저장
+let expandedStates = [false, false]; // [내부활동, 외부활동]
+
 schoolButtons.forEach((btn, index) => {
   btn.addEventListener('click', () => {
-    // 모든 카드 초기화 (크기 작게, 투명도 낮춤)
-    schoolCards.forEach(card => {
-      card.style.transform = 'scale(0.85)';
-      card.style.opacity = '0.4';
-      card.style.transition = 'all 0.3s ease';
-    });
+    // 현재 버튼에 해당하는 카드의 상태를 토글
+    expandedStates[index] = !expandedStates[index];
     
-    // 클릭한 버튼에 해당하는 카드만 확대
-    if (schoolCards[index]) {
-      schoolCards[index].style.transform = 'scale(1.05)';
-      schoolCards[index].style.opacity = '1';
-      schoolCards[index].style.boxShadow = '0 20px 40px rgba(16, 185, 129, 0.3)';
-      schoolCards[index].style.zIndex = '10';
+    if (expandedStates[index]) {
+      // 확대 상태
+      schoolCards.forEach((card, i) => {
+        if (i === index) {
+          // 클릭한 카드 확대
+          card.style.transform = 'scale(1.05)';
+          card.style.opacity = '1';
+          card.style.boxShadow = '0 20px 40px rgba(16, 185, 129, 0.3)';
+          card.style.zIndex = '10';
+        } else {
+          // 다른 카드는 축소
+          card.style.transform = 'scale(0.85)';
+          card.style.opacity = '0.4';
+        }
+        card.style.transition = 'all 0.3s ease';
+      });
       
+      // 버튼 스타일
+      schoolButtons.forEach((b, i) => {
+        if (i === index) {
+          b.style.opacity = '1';
+          b.style.transform = 'scale(1.1)';
+        } else {
+          b.style.opacity = '0.6';
+          b.style.transform = 'scale(1)';
+        }
+      });
+      
+      // 스크롤 이동
       schoolCards[index].scrollIntoView({
         behavior: 'smooth',
         block: 'center'
       });
+      
+    } else {
+      // 축소 상태 (원래대로)
+      schoolCards.forEach(card => {
+        card.style.transform = 'scale(1)';
+        card.style.opacity = '1';
+        card.style.boxShadow = '';
+        card.style.zIndex = '';
+      });
+      
+      schoolButtons.forEach(b => {
+        b.style.opacity = '1';
+        b.style.transform = 'scale(1)';
+      });
     }
-    
-    // 버튼 활성화 스타일
-    schoolButtons.forEach(b => {
-      b.style.opacity = '0.6';
-      b.style.transform = 'scale(1)';
-    });
-    btn.style.opacity = '1';
-    btn.style.transform = 'scale(1.1)';
   });
 });
 
