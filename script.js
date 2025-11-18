@@ -11,9 +11,9 @@ const body = document.body;
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme === 'dark') {
   body.classList.add('dark');
-  themeToggle.textContent = '☀️';
+  themeToggle.textContent = 'LIGHT';
 } else {
-  themeToggle.textContent = '🌙';
+  themeToggle.textContent = 'DARK';
 }
 
 // 테마 토글 버튼 클릭 이벤트
@@ -21,10 +21,10 @@ themeToggle.addEventListener('click', () => {
   body.classList.toggle('dark');
   
   if (body.classList.contains('dark')) {
-    themeToggle.textContent = '☀️';
+    themeToggle.textContent = 'LIGHT';
     localStorage.setItem('theme', 'dark');
   } else {
-    themeToggle.textContent = '🌙';
+    themeToggle.textContent = 'DARK';
     localStorage.setItem('theme', 'light');
   }
 });

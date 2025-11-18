@@ -1,5 +1,7 @@
 /* style.css */
-
+a{
+  text-decoration: none;
+}
 :root {
   --background: #ffffff;
   --foreground: #111827;
